@@ -23,3 +23,5 @@ Route::get('/about', 'firsttcontroller@indexaboutus');
 Route::get('/tasks', function () {
     return view('tasks');
 });
+
+Route :: post('/laravel/blog/public/saveTask','TaskController@strore');

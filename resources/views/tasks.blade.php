@@ -8,17 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <div class="text-center">
             <h1>Daily Task</h1>
             <div class="row">
                 <div class="col-md-12">
+                <form method="post" action="/saveTask">
                     <input type="text" class="form-control" name="task" placeholder="Enter your task here">
+                    {{csrf_field()}}
                     <br>
-                    <input type="button" class="btn-btn-primary" value="save">
-                    <input type="button" class="btn-btn-warning" value="clear">
+                    <input type="submit" class="btn btn-primary" value="save">
+                    <input type="button" class="btn btn-warning" value="clear">
+                </form>
                     <br>
-                    <table class="table table-dark">
+                    <table class="table table-dark mt-5">
                         <th>ID</th>
                         <th>Task</th>
                         <th>Completed</th>
