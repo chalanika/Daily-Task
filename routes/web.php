@@ -18,3 +18,8 @@ Route::get('/', function () {
 
 
 Route::get('/about', 'firsttcontroller@indexaboutus');
+
+
+Route::get('/tasks', function () {
+    return view('tasks');
+});
